@@ -19,6 +19,7 @@
             int[,] a = { { 7, 3, 2 }, { 4, 9, 6 }, { 1, 8, 5 } };
             List<int> list = new List<int>();
 
+            // добавление элементов массива в список
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < a.GetLength(1); j++)
@@ -27,18 +28,19 @@
                 }
             }
             list.Sort();
+
+            // добавление отсортированных элементов списка в двумерный массив
             int k = 0;
+
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < a.GetLength(1); j++)
                 {
-
-                        a[i, j] = list[k];
-
+                    a[i, j] = list[k];
                     k++;
                 }
             }
-
+            // вывод двумерного массива
             for (int i = 0; i < a.GetLength(0); i++)
             {
                 for (int j = 0; j < a.GetLength(1); j++)
@@ -48,13 +50,6 @@
                 Console.WriteLine();
             }
             Console.WriteLine();
-
-            //for (int k = 0; k < list.Count; k++)
-            //{
-            //    Console.Write(list[k]);
-            //}
-
-
         }
     }
 }
